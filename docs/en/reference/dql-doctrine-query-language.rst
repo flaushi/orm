@@ -499,6 +499,9 @@ Get all instances of a specific type, for use with inheritance hierarchies. Thes
     $query = $em->createQuery('SELECT u FROM Doctrine\Tests\Models\Company\CompanyPerson u WHERE u INSTANCE OF ?1');
     $query = $em->createQuery('SELECT u FROM Doctrine\Tests\Models\Company\CompanyPerson u WHERE u NOT INSTANCE OF ?1');
 
+.. note::
+    To use a class as parameter, you have to bind it's class metadata: ``$query->setParameter(0, $em->getClassMetadata(CompanyEmployee::class);``.
+
 Using IDENTITY() in queries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
