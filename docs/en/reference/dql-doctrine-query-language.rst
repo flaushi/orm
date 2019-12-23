@@ -501,7 +501,7 @@ Get all instances of a specific type, for use with inheritance hierarchies. Thes
     $query->setParameter(1, $em->getClassMetadata(CompanyEmployee::class);
 
 .. note::
-    To use a class as parameter, you have to bind it's class metadata: ``$query->setParameter(0, $em->getClassMetadata(CompanyEmployee::class);``.
+    To use a class as parameter, you have to bind its class metadata: ``$query->setParameter(0, $em->getClassMetadata(CompanyEmployee::class);``.
 
 Using IDENTITY() in queries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
